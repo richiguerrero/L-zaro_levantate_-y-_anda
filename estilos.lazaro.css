@@ -316,8 +316,8 @@ footer {
 
 section#contact form {
   max-width: 600px;
-  margin: 0 auto; 
-  display: flex; 
+  margin: 0 auto;
+  display: flex;
   flex-direction: column;
 }
 
@@ -344,12 +344,122 @@ section#contact input[type="submit"] {
   background-color: #333;
   color: #fff;
   border: none;
-  padding: 15px; 
-  cursor: pointer; 
+  padding: 15px;
+  cursor: pointer;
   margin-top: 15px;
   border-radius: 5px;
-} 
+}
 
 section#contact input[type="submit"]:hover {
   background-color: #555;
 }
+
+/* ================================
+   RESPONSIVE GENERAL PARA TABLETS
+================================ */
+@media (max-width: 768px) {
+
+  /* Header */
+  .header-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .logo {
+    width: 65px;
+  }
+
+  /* CARRUSEL ALTURA MENOR */
+  #carouselExampleCaptions,
+  .carousel-inner,
+  .carousel-item {
+    height: 50vh;
+  }
+
+  .carousel-caption {
+    bottom: 20px;
+    left: 10px;
+    max-width: 90%;
+  }
+
+  .carousel-caption h5 {
+    font-size: 1.6rem;
+  }
+
+  .carousel-caption p {
+    font-size: 1rem;
+  }
+
+  /* Secciones */
+  section {
+    padding: 40px 20px;
+  }
+
+  section h2 {
+    font-size: 1.4rem;
+  }
+
+  /* Catálogo */
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    max-width: 90%;
+  }
+
+  /* Galería */
+  .galeria-wrapper {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  }
+
+  .foto {
+    height: 160px;
+  }
+
+  /* Formulario */
+  form {
+    width: 100%;
+    padding: 0 10px;
+  }
+}
+
+/* ================================
+   RESPONSIVE PARA CELULARES PEQUEÑOS
+================================ */
+@media (max-width: 480px) {
+
+  /* Carrusel compacto */
+  #carouselExampleCaptions,
+  .carousel-item,
+  .carousel-inner {
+    height: 40vh;
+  }
+
+  .carousel-caption h5 {
+    font-size: 1.2rem;
+  }
+
+  .carousel-caption p {
+    font-size: 0.9rem;
+  }
+
+  /* Ajuste galería */
+  .foto {
+    height: 140px;
+  }
+
+  /* Títulos más pequeños */
+  section h2 {
+    font-size: 1.2rem;
+  }
+}
+}
+
