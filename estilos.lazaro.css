@@ -1,0 +1,355 @@
+/* ================================
+   RESET Y BASE
+================================ */
+body {
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #e8dccb;
+  color: #222222;
+  scroll-behavior: smooth;
+}
+
+#carouselExampleCaptions {
+  width: 100%;
+  height: 80vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.carousel-inner,
+.carousel-item {
+  height: 80vh;
+  /* en vez de 100vh */
+}
+
+.misimg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* ================================
+   TEXTO ABAJO A LA IZQUIERDA
+   (corregido sobre tu código)
+   ================================ */
+/* TEXTO ABAJO A LA IZQUIERDA */
+/* TEXTO ABAJO A LA IZQUIERDA */
+.carousel-caption {
+  position: absolute;
+  bottom: 40px;
+  /* distancia desde abajo */
+  left: 15px;
+  /* distancia desde la izquierda */
+  transform: none;
+  /* quita el centrado */
+  text-align: left;
+  /* alinea todo a la izquierda */
+  width: auto;
+  padding: 0;
+  max-width: 60%;
+  /* evita que el texto se haga demasiado ancho */
+}
+
+.carousel-caption h5 {
+  font-size: 2.8rem;
+  margin: 0 0 10px 0;
+  /* espaciado entre título y párrafo */
+  text-align: left;
+  color: #222222;
+}
+
+.carousel-caption p {
+  font-size: 1.3rem;
+  margin: 0;
+  color: #222222;
+  text-align: left;
+}
+
+
+
+/* ================================
+   HEADER
+================================ */
+header {
+  background-color: #8b6c4a;
+  padding: 15px 0;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.logo {
+  width: 80px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #e8dccb;
+}
+
+/* ================================
+   SECCIONES GENERALES
+================================ */
+section {
+  padding: 80px 40px;
+}
+
+section h2 {
+  text-align: center;
+  color: #8b6c4a;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+
+section p {
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+  line-height: 1.6;
+  color: #222222;
+}
+
+/* ================================
+   CATÁLOGO
+================================ */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* ================================
+   GALERÍA
+================================ */
+.galeria-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 24px;
+}
+
+.galeria {
+  border: 4px solid #6f5435;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.galeria:hover {
+  transform: translateY(-5px);
+}
+
+.foto {
+  height: 220px;
+  overflow: hidden;
+}
+
+.foto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pie {
+  padding: 10px;
+  background-color: #e8dccb;
+  color: #222222;
+  font-weight: 500;
+}
+
+/* ================================
+   LIGHTBOX
+================================ */
+.lightbox-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 2000;
+  opacity: 0;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.lightbox-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.lightbox-content-wrapper {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox-image {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 10px;
+  object-fit: contain;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 2.5rem;
+  color: #ffffff;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+}
+
+.close-btn:hover {
+  color: #fca5a5;
+}
+
+/* ================================
+   CONTACTO
+================================ */
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: auto;
+  gap: 10px;
+}
+
+form input,
+form textarea {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ac9a85;
+  font-size: 1em;
+  font-family: inherit;
+}
+
+form button {
+  background-color: #8b6c4a;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #6f5435;
+}
+
+/* ================================
+   FOOTER
+================================ */
+footer {
+  background-color: #8b6c4a;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 60px;
+  font-size: 0.9rem;
+}
+
+section#contact form {
+  max-width: 600px;
+  margin: 0 auto; 
+  display: flex; 
+  flex-direction: column;
+}
+
+section#contact label {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+section#contact input,
+section#contact textarea {
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+section#contact textarea {
+  resize: vertical;
+  height: 150px;
+}
+
+section#contact input[type="submit"] {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 15px; 
+  cursor: pointer; 
+  margin-top: 15px;
+  border-radius: 5px;
+} 
+
+section#contact input[type="submit"]:hover {
+  background-color: #555;
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Productos - Mi Empresa</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="carrito.js"></script>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">Mi Tienda Online</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#cartModal">
+                            <i class="bi bi-cart"></i> Carrito (<span id="cart-count">0</span>)
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <h1 class="mb-4 text-center">Nuestros Productos</h1>
+        <div class="row" id="product-list">
+            <div class="col-md-4">
+                <div class="product-card">
+                    <img src="img/tienda virtual/cam_rus.png" class="img-fluid" alt="cama rustica">
+                    <h5>Cama Rústica</h5>
+                    <p class="text-muted">Comodidad que perdura.</p>
+                    <p class="price">$2.000.000</p>
+                    <button class="btn btn-primary add-to-cart" data-id="1" data-name="Cama rustica"
+                        data-price="2000000">
+                        Agregar al Carrito
+                    </button>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="product-card">
+                    <img src="img/tienda virtual/com_rus_1.png" class="img-fluid" alt="Comedor Rústico">
+                    <h5>Comedor Rústico</h5>
+                    <p class="text-muted">Espacio con calor de hogar.</p>
+                    <p class="price">$2.500.000</p>
+                    <button class="btn btn-primary add-to-cart" data-id="2" data-name="Comedor Rústico"
+                        data-price="2500000">
+                        Agregar al Carrito
+                    </button>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="product-card">
+                    <img src="img/tienda virtual/como_rus_1.png" class="img-fluid" alt="Cómoda Rústica">
+                    <h5>Cómoda Rústica</h5>
+                    <p class="text-muted">Diseño funcional garantizado.</p>
+                    <p class="price">$850.000</p>
+                    <button class="btn btn-primary add-to-cart" data-id="3" data-name="Cómoda Rústica"
+                        data-price="850000">
+                        Agregar al Carrito
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="cartModalLabel">Tu Carrito de Compras</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Producto</th>
+                                <th scope="col">Precio</th>
+                                <th scope="col">Cantidad</th>
+                                <th scope="col">Total</th>
+                                <th scope="col">Acción</th>
+                            </tr>
+                        </thead>
+                        <tbody id="cart-items">
+                            <tr>
+                                <td colspan="5" class="text-center" id="empty-cart-message">El carrito está vacío.</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th colspan="3" class="text-end">Total General:</th>
+                                <th id="cart-total">$0.00</th>
+                                <th></th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Seguir Comprando</button>
+                    <a href="https://clientes.nequi.com.co/recargas"><button type="button"
+                            class="btn btn-success">Finalizar Compra</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+
+
+</body>
+
+</html>

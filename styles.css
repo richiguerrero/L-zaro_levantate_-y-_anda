@@ -1,0 +1,116 @@
+/* ========================================================= */
+/* 1. ESTILOS GLOBALES (BASE) */
+/* ========================================================= */
+body {
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #e8dccb;
+  /* Fondo Cálido Beige/Crema */
+  color: #222222;
+  /* Texto Principal Gris Oscuro */
+  scroll-behavior: smooth;
+}
+
+/* ========================================================= */
+/* 2. ESTILOS DE LA TARJETA DE PRODUCTO */
+/* ========================================================= */
+.product-card {
+  border: 1px solid #d4c09d;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  background-color: #ffffff;
+}
+
+.product-card img {
+  max-width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.product-card h5 {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+  color: #4a4a4a;
+}
+
+.product-card .price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #8b6c4a;
+  /* Color de Énfasis (Marrón/Tostado) */
+  margin-bottom: 15px;
+}
+
+/* ========================================================= */
+/* 3. ESTILOS DE BOTONES (NUEVO) */
+/* Usamos el selector genérico 'button' y la clase de Bootstrap '.btn-primary' 
+ o una clase personalizada como '.btn-comprar' */
+/* ========================================================= */
+button,
+.btn-primary,
+.btn-comprar {
+  /* Estilo base */
+  background-color: #8b6c4a;
+  /* Color de marca: Marrón/Tostado */
+  color: #ffffff;
+  /* Texto del botón: Blanco */
+  border: 1px solid #8b6c4a;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s ease;
+  /* Transición suave para el color */
+}
+
+button:hover,
+.btn-primary:hover,
+.btn-comprar:hover {
+  /* Efecto al pasar el ratón (Hover) */
+  background-color: #9d7d59;
+  /* Un tono ligeramente más claro y cálido */
+  border-color: #9d7d59;
+}
+
+button:active,
+.btn-primary:active,
+.btn-comprar:active {
+  /* Efecto al presionar (Click) */
+  background-color: #755a3d;
+  /* Un tono más oscuro para simular el "hundimiento" */
+  border-color: #755a3d;
+  transform: translateY(1px);
+  /* Mueve el botón ligeramente hacia abajo */
+}
+
+/* ========================================================= */
+/* 4. ESTILOS DE LA BARRA DE NAVEGACIÓN (NAVBAR) */
+/* ========================================================= */
+.nav-link {
+  color: #060606;
+}
+
+.nav-link:hover {
+  color: #fe0404;
+}
+
+.bg-dark {
+  --bs-bg-opacity: 1;
+  background-color: #8b6c4a !important;
+  /* Color principal de la marca (Marrón/Tostado) */
+}
+
+.navbar-dark .navbar-brand,
+.navbar-dark .navbar-nav .nav-link {
+  color: #ffffff;
+}
+
+.navbar navbar-expand-lg navbar-dark bg-dark {
+  --bs-bg-opacity: 1;
+}
